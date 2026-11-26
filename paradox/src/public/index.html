@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PARADOX — Where Vision Meets Capital</title>
+  <meta name="description" content="PARADOX is a premium technology-driven investment platform connecting ambitious entrepreneurs with verified accredited investors.">
+  <meta name="theme-color" content="#080808">
+
+  <!-- Typography: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Design System Stylesheet -->
+  <link rel="stylesheet" href="/css/paradox.css">
+
+  <!-- Immediate Theme Initializer (Eliminates Flash) -->
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('paradox_theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
+</head>
+<body>
+  <!-- Demo Fast Switcher Bar (For Seamless Multi-Role Testing) -->
+  <div id="demo-bar" class="demo-bar"></div>
+
+  <!-- Primary Site Header -->
+  <header id="site-header" class="site-header"></header>
+
+  <!-- Dynamic Application View Mount -->
+  <div id="app-container"></div>
+
+  <!-- Global Modal Dialog (Inspections, KYC, Offer Submission) -->
+  <div id="global-modal" class="modal-overlay" onclick="if(event.target === this) App.closeModal()">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 id="modal-title" class="modal-title"></h3>
+        <button class="modal-close-btn" onclick="App.closeModal()">✕</button>
+      </div>
+      <div id="modal-body" class="modal-body"></div>
+      <div id="modal-footer" class="modal-footer"></div>
+    </div>
+  </div>
+
+  <!-- Toast Notification System -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Client-Side Engine -->
+  <script src="/js/api.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>
